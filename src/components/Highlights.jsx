@@ -2,6 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Highlights = () => {
+    console.log("Hello World");
+    console.log("Highlights section");
     return (
         <section id="highlights">
             <div className="container">
