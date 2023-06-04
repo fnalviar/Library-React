@@ -1,10 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Highlight from "./Highlight";
+import Highlight from "./ui/Highlight";
 
 const Highlights = () => {
-  console.log("Hello World");
-  console.log("Highlights section");
   return (
     <section id="highlights">
       <div className="container">
