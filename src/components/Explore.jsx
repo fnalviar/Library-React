@@ -2,7 +2,7 @@ import React from 'react';
 
 const Explore = () => {
     return (
-        <div id="explore">
+        <section id="explore">
             <div className="container">
                 <div className="row row__column">
                     <h2>
@@ -13,7 +13,7 @@ const Explore = () => {
                     </a>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

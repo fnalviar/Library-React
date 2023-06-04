@@ -1,20 +1,20 @@
-import Discounted from "./components/Discounted.jsx";
-import Explore from "./components/Explore.jsx";
-import Features from "./components/Features.jsx";
-import Highlights from "./components/Highlights.jsx";
-import Landing from "./components/Landing.jsx";
+import { Route, BrowserRouter as Router } from "react-router-dom";
+import Footer from "./components/Footer.jsx";
 import Nav from "./components/Nav.jsx";
+import Home from "./components/pages/Home.jsx";
+import Books from "./components/pages/Books.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      <Landing />
-      <Highlights />
-      <Features />
-      <Discounted />
-      <Explore />
-    </div>
+    <Router>
+      <div className="App">
+        <Nav />
+        <Route path="/" exact component={Home}/>
+        <Route path="/books" component={Books} />
+
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
