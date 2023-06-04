@@ -1,5 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Highlight from './Highlight';
 
 const Highlights = () => {
     console.log("Hello World");
@@ -12,6 +13,7 @@ const Highlights = () => {
                         Why choose <span className="purple">Library</span>
                     </h2>
                     <div className="highlight__wrapper">
+                        <Highlight />
                         <div className="highlight">
                             <div className="highlight__img">
                                 <FontAwesomeIcon icon="bolt"/>
