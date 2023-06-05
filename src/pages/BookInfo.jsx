@@ -15,10 +15,7 @@ const BookInfo = ({ books, addToCart, cart }) => {
   }
 
   function bookExistOnCart() {
-    if(!cart) {
-      return false;
-    }
-    return cart.find((book) => +book.id === +id); //+ means to make book.id and id into a number
+    return cart?.find((book) => +book.id === +id); //+ means to make book.id and id into a number
   }
 
   return (

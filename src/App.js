@@ -12,24 +12,6 @@ function App() {
   const [cart, setCart] = useState([]);
 
   function addToCart(book) {
-    // const duplicateItem = cart.find((item) => +item.id === +book.id);
-    // if (duplicateItem) {
-    //   setCart(
-    //     cart.map((item) => {
-    //       if (item.id === duplicateItem.id) {
-    //         return {
-    //           ...item,
-    //           quantity: item.quantity + 1,
-    //         };
-    //       } else {
-    //         return item;
-    //       }
-    //     })
-    //   );
-    // } else {
-    //   setCart([...cart, { ...book, quantity: 1 }]);
-    // }
-
     setCart([...cart, { ...book, quantity: 1 }]);
   }
 
@@ -48,17 +30,22 @@ function App() {
 
   function removeItem(item) {
     setCart(cart.filter((book) => book.id !== item.id));
-    console.log("removeItem", item);
   }
 
-  useEffect(() => {
-    console.log(cart);
-  }, [cart]);
+  function numberOfItems() {
+    let counter = 0;
+    cart.forEach((item) => {
+      counter += item.quantity;
+    });
+    return counter;
+  }
+
+  useEffect(() => {}, [cart]);
 
   return (
     <Router>
       <div className="App">
-        <Nav />
+        <Nav numberOfItems={numberOfItems()} />
         <Route path="/" exact component={Home} />
         <Route path="/books" exact render={() => <Books books={books} />} />
         <Route

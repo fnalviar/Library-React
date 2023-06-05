@@ -72,38 +72,42 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
                   );
                 })}
               </div>
-              <div className="cart__empty">
-                <img
-                  src={EmptyCart}
-                  alt="Empty Cart Image"
-                  className="cart__empty--img"
-                />
-                <h2>You don't have any books in your cart!</h2>
-                <Link to="/books">
-                <button className="btn">Browse Books</button>
-                </Link>
-              </div>
+              {cart.length === 0 && (
+                <div className="cart__empty">
+                  <img
+                    src={EmptyCart}
+                    alt="Empty Cart Image"
+                    className="cart__empty--img"
+                  />
+                  <h2>You don't have any books in your cart!</h2>
+                  <Link to="/books">
+                    <button className="btn">Browse Books</button>
+                  </Link>
+                </div>
+              )}
             </div>
-            <div className="total">
-              <div className="total__item total__sub--total">
-                <span>Subtotal</span>
-                <span>${(total() * 0.9).toFixed(2)}</span>
+            {cart.length > 0 && (
+              <div className="total">
+                <div className="total__item total__sub--total">
+                  <span>Subtotal</span>
+                  <span>${(total() * 0.9).toFixed(2)}</span>
+                </div>
+                <div className="total__item total__tax">
+                  <span>Tax</span>
+                  <span>${(total() * 0.1).toFixed(2)}</span>
+                </div>
+                <div className="total__item total__price">
+                  <span>Total</span>
+                  <span>${total().toFixed(2)}</span>
+                </div>
+                <button
+                  className="btn btn__checkout no-cursor"
+                  onClick={() => alert(`Haven't got around to doing this :(`)}
+                >
+                  Proceed to checkout
+                </button>
               </div>
-              <div className="total__item total__tax">
-                <span>Tax</span>
-                <span>${(total() * 0.1).toFixed(2)}</span>
-              </div>
-              <div className="total__item total__price">
-                <span>Total</span>
-                <span>${total().toFixed(2)}</span>
-              </div>
-              <button
-                className="btn btn__checkout no-cursor"
-                onClick={() => alert("Havent implemented this function")}
-              >
-                Proceed to Checkout
-              </button>
-            </div>
+            )}
           </div>
         </div>
       </main>
