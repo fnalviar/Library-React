@@ -51,7 +51,7 @@ function App() {
         <Route
           path="/books/:id"
           exact
-          render={() => <BookInfo books={books} addToCart={addToCart} />}
+          render={() => <BookInfo books={books} addToCart={addToCart} cart={cart} />}
         />
         <Route
           path="/cart"
