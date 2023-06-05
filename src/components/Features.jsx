@@ -4,7 +4,6 @@ import { books } from '../data.js';
 
 const Features = () => {
   console.log(books);
-  console.log()
 
   function getFiveStarBooks() {
   }
