@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import EmptyCart from "../assets/empty_cart.svg";
 
 const Cart = ({ cart, changeQuantity, removeItem }) => {
@@ -77,6 +78,10 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
                   alt="Empty Cart Image"
                   className="cart__empty--img"
                 />
+                <h2>You don't have any books in your cart!</h2>
+                <Link to="/books">
+                <button className="btn">Browse Books</button>
+                </Link>
               </div>
             </div>
             <div className="total">

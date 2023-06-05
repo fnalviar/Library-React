@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Footer from "./components/Footer.jsx";
 import Nav from "./components/Nav.jsx";
-import Home from "./components/pages/Home.jsx";
-import Books from "./components/pages/Books.jsx";
-import BookInfo from "./components/pages/BookInfo.jsx";
 import { books } from "./data.js";
-import Cart from "./components/pages/Cart.jsx";
 import React, { useEffect, useState } from "react";
+import BookInfo from "./pages/BookInfo.jsx";
+import Cart from "./pages/Cart.jsx";
+import Books from "./pages/Books.jsx";
+import Home from "./pages/Home.jsx";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -47,8 +47,8 @@ function App() {
   }
 
   function removeItem(item) {
-    setCart(cart.filter(book => book.id !== item.id))
-    console.log("removeItem", item)
+    setCart(cart.filter((book) => book.id !== item.id));
+    console.log("removeItem", item);
   }
 
   useEffect(() => {
@@ -69,7 +69,12 @@ function App() {
         <Route
           path="/cart"
           render={() => (
-            <Cart books={books} cart={cart} changeQuantity={changeQuantity} removeItem={removeItem} />
+            <Cart
+              books={books}
+              cart={cart}
+              changeQuantity={changeQuantity}
+              removeItem={removeItem}
+            />
           )}
         />
         <Footer />

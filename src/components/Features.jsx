@@ -1,6 +1,6 @@
 import React from "react";
-import Book from "./ui/Book";
 import { books } from '../data.js';
+import Book from "./Book.jsx";
 
 const Features = () => {
 

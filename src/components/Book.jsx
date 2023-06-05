@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Rating from "./Rating";
-import Price from "./Price";
+import Rating from "./ui/Rating";
+import Price from "./ui/Price";
 
 const Book = ({ book }) => {
   return (
