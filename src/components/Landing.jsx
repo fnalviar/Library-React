@@ -17,7 +17,7 @@ const Landing = () => {
             </Link>
           </div>
           <figure className="header__img--wrapper">
-            <img src={UndrawBooks} alt="" />
+            <img src={UndrawBooks} alt="Header Undraw Image" />
           </figure>
         </div>
       </header>

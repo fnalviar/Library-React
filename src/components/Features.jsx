@@ -3,7 +3,6 @@ import Book from "./ui/Book";
 import { books } from '../data.js';
 
 const Features = () => {
-  console.log(books);
 
   function getFiveStarBooks() {
   }
