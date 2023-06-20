@@ -10,7 +10,7 @@ const Books = ({ books: initialBooks }) => {
         setBooks(books.slice().sort((a,b) => (a.salePrice || a.originalPrice) - (b.salePrice || b.originalPrice)))
     }
 
-    if(filter === "HIGH_TOLOW") {
+    if(filter === "HIGH_TO_LOW") {
         setBooks(books.slice().sort((a,b) => (b.salePrice || b.originalPrice) - (a.salePrice || a.originalPrice)))
     }
 
