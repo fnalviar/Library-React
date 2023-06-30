@@ -90,19 +90,19 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
               <div className="total">
                 <div className="total__item total__sub--total">
                   <span>Subtotal</span>
-                  <span>${(total() * 0.9).toFixed(2)}</span>
+                  <span>${total().toFixed(2)}</span>
                 </div>
                 <div className="total__item total__tax">
                   <span>Tax</span>
-                  <span>${(total() * 0.1).toFixed(2)}</span>
+                  <span>${(total() * 0.13).toFixed(2)}</span>
                 </div>
                 <div className="total__item total__price">
                   <span>Total</span>
-                  <span>${total().toFixed(2)}</span>
+                  <span>${((total() * 0.13) + total()).toFixed(2)}</span>
                 </div>
                 <button
                   className="btn btn__checkout no-cursor"
-                  onClick={() => alert(`Haven't got around to doing this :(`)}
+                  onClick={() => alert(`Haven't implemented this feature`)}
                 >
                   Proceed to checkout
                 </button>
